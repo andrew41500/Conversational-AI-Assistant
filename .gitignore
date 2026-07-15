@@ -12,3 +12,10 @@ node_modules/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Scratch / working files
+GIthub.md
+chart_prompt.md
+chat.db
+long_text.md
+implementation_plan.md

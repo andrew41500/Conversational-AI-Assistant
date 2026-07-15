@@ -231,7 +231,7 @@ function App() {
         <header className="chat-header">
           <div className="title">
             <h1>{sessions.find(s => s.id === activeSessionId)?.title || "New Chat"}</h1>
-            <span className="badge">Llama-3 via Groq</span>
+            
           </div>
         </header>
 

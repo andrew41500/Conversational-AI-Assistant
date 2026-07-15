@@ -107,5 +107,32 @@ The LLM will recognize the request, call the MCP server, and render an inline PN
 
 ---
 
+## 🧪 Quality Assurance & Testing
+
+This project includes a comprehensive automated test suite to ensure system stability and API contract integrity.
+
+### How to Run Tests
+To verify the backend logic and database persistence:
+
+1.  **Navigate to the backend directory**:
+    ```bash
+    cd backend
+    ```
+2.  **Install testing dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Run the automated test suite**:
+    ```bash
+    pytest tests/test_main.py
+    ```
+
+### What is covered?
+- **API Health Checks**: Verification that all session and history endpoints are accessible.
+- **Data Persistence**: Validation of the SQLite/SQLAlchemy message storage layer.
+- **Contract Integrity**: Ensuring the chat and streaming endpoints adhere to the expected JSON schemas.
+
+---
+
 ## 📝 License
 This project is part of a technical assessment. All rights reserved by the author.

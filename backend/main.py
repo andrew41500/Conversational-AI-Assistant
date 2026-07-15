@@ -167,7 +167,12 @@ async def chat_stream(request: ChatRequest, db: Session = Depends(get_db)):
                 yield tool_result
 
         except Exception as e:
-            yield f"\n\n[Error communicating with LLM: {str(e)}\nPlease check if your GROQ_API_KEY is correct.]"
+            error_msg = str(e)
+            # Check for token limit or rate limit errors specifically
+            if "rate_limit_exceeded" in error_msg or "413" in error_msg or "TPM" in error_msg:
+                yield f"\n\n[Your message is too long for the AI to process. Please try a shorter message or start a new chat.]"
+            else:
+                yield f"\n\n[Error communicating with LLM: {error_msg}\nPlease check if your GROQ_API_KEY is correct.]"
         finally:
             # Save AI Response to Database
             from database import SessionLocal
