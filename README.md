@@ -1,4 +1,4 @@
-# 🚀 MaiStorage - Conversational AI Assistant with MCP Visualization
+# 🚀 Conversational AI Assistant with MCP Visualization
 
 A professional, enterprise-grade LLM Chat Interface built. This project features a full-screen multi-session layout, real-time streaming responses, and an integrated **Model Context Protocol (MCP)** style Data Visualization server.
 
